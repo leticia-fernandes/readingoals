@@ -1,0 +1,37 @@
+<%= form_with(model: reading_goal, local: true) do |form| %>
+  <% if reading_goal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reading_goal.errors.count, "error") %> prohibited this reading_goal from being saved:</h2>
+
+      <ul>
+      <% reading_goal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :reading_goal_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_pages %>
+    <%= form.number_field :number_pages, id: :reading_goal_number_pages %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deadline %>
+    <%= form.date_select :deadline, id: :reading_goal_deadline %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pages_per_day %>
+    <%= form.number_field :pages_per_day, id: :reading_goal_pages_per_day %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

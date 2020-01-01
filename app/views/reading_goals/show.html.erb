@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @reading_goal.title %>
+</p>
+
+<p>
+  <strong>Number pages:</strong>
+  <%= @reading_goal.number_pages %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @reading_goal.deadline %>
+</p>
+
+<p>
+  <strong>Pages per day:</strong>
+  <%= @reading_goal.pages_per_day %>
+</p>
+
+<%= link_to 'Edit', edit_reading_goal_path(@reading_goal) %> |
+<%= link_to 'Back', reading_goals_path %>

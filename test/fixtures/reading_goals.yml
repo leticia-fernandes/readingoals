@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  number_pages: 1
+  deadline: 2020-01-01
+  pages_per_day: 1
+
+two:
+  title: MyString
+  number_pages: 1
+  deadline: 2020-01-01
+  pages_per_day: 1

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Reading Goals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Number pages</th>
+      <th>Deadline</th>
+      <th>Pages per day</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reading_goals.each do |reading_goal| %>
+      <tr>
+        <td><%= reading_goal.title %></td>
+        <td><%= reading_goal.number_pages %></td>
+        <td><%= reading_goal.deadline %></td>
+        <td><%= reading_goal.pages_per_day %></td>
+        <td><%= link_to 'Show', reading_goal %></td>
+        <td><%= link_to 'Edit', edit_reading_goal_path(reading_goal) %></td>
+        <td><%= link_to 'Destroy', reading_goal, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reading Goal', new_reading_goal_path %>

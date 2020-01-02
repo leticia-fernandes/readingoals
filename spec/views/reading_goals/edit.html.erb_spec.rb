@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "reading_goals/edit", type: :view do
   before(:each) do
-    @reading_goal = assign(:reading_goal, ReadingGoal.create!(
-      :title => "MyString",
-      :number_pages => 1,
-      :pages_per_day => 1
-    ))
+    let!(:reading_goal) { create(:reading_goal) }
   end
 
   it "renders the edit reading_goal form" do

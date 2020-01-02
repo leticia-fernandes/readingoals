@@ -2,18 +2,8 @@ require 'rails_helper'
 
 RSpec.describe "reading_goals/index", type: :view do
   before(:each) do
-    assign(:reading_goals, [
-      ReadingGoal.create!(
-        :title => "Title",
-        :number_pages => 2,
-        :pages_per_day => 3
-      ),
-      ReadingGoal.create!(
-        :title => "Title",
-        :number_pages => 2,
-        :pages_per_day => 3
-      )
-    ])
+    let!(:reading_goal1) { create(:reading_goal) }
+    let!(:reading_goal2) { create(:reading_goal) }
   end
 
   it "renders a list of reading_goals" do

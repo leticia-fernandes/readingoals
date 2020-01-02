@@ -2,11 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "reading_goals/show", type: :view do
   before(:each) do
-    @reading_goal = assign(:reading_goal, ReadingGoal.create!(
-      :title => "Title",
-      :number_pages => 2,
-      :pages_per_day => 3
-    ))
+    let!(:reading_goal) { create(:reading_goal) }
   end
 
   it "renders attributes in <p>" do

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200101235053) do
+ActiveRecord::Schema.define(version: 20200102215200) do
 
   create_table "reading_goals", force: :cascade do |t|
-    t.string "title"
-    t.integer "number_pages"
-    t.date "deadline"
-    t.integer "pages_per_day"
+    t.string "title", null: false
+    t.integer "number_pages", null: false
+    t.date "deadline", null: false
+    t.integer "pages_per_day", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

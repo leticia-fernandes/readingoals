@@ -1,15 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "reading_goals/new", type: :view do
-  before(:each) do
-    assign(:reading_goal, ReadingGoal.new(
-      :title => "MyString",
-      :number_pages => 1,
-      :pages_per_day => 1
-    ))
-  end
+  let!(:reading_goal) { build(:reading_goal) }
 
   it "renders new reading_goal form" do
+    assign(:reading_goal, reading_goal)
+
     render
 
     assert_select "form[action=?][method=?]", reading_goals_path, "post" do

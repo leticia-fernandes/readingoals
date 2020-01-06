@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :reading_goal do
-    title { "Joe" }
-    number_pages { "100" }
-    deadline { 10.days.from_now }
-    pages_per_day { "10" }
+    title { Faker::Book.title }
+    number_pages { Faker::Number.positive }
+    deadline { Faker::Date.between(from: 2.days.ago, to: Date.today) }
+    pages_per_day { Faker::Number.positive }
   end
 end

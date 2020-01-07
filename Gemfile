@@ -41,6 +41,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 group :development do
